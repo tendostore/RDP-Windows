@@ -160,7 +160,6 @@ docker run -d \
   -e USERNAME="$RDP_USER" \
   -e PASSWORD="$RDP_PASS" \
   -e RDP="true" \
-  --vga qxl \
   dockur/windows
 
 IP_PUBLIK=$(curl -s ifconfig.me || curl -s icanhazip.com)
@@ -180,4 +179,3 @@ echo "   Password    : Sesuai yang Anda inputkan di awal."
 echo "=========================================================================="
 
 # === SELESAI ===
-
