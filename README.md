@@ -4,10 +4,14 @@
 Gunakan salah satu perintah di bawah ini untuk mengunduh dan menjalankan skrip secara otomatis:
 
 **Menggunakan cURL:**
-`bash <(curl -s https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh)`
+```bash
+bash <(curl -s https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh)
+```
 
 **Atau menggunakan Wget:**
-`wget -qO- https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh | bash`
+```bash
+wget -qO- https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh | bash
+```
 
 ---
 
@@ -35,15 +39,13 @@ Sangat cocok untuk VPS dengan spesifikasi terbatas karena menyediakan pilihan OS
 1. Login ke VPS Anda menggunakan SSH.
 2. Jalankan perintah **Quick Install** di bagian atas halaman ini.
 3. Ikuti instruksi di layar untuk memilih versi Windows, mengetikkan Port RDP, dan Password.
-4. **SANGAT PENTING:** Setelah skrip selesai, segera buka browser (Chrome/Firefox) dan akses http://<IP_VPS_ANDA>:8006 untuk memantau layar proses instalasi awal Windows. Jika proses meminta persetujuan lisensi atau partisi, klik secara manual menggunakan mouse dari browser.
+4. **SANGAT PENTING:** Setelah skrip selesai, segera buka browser (Chrome/Firefox) dan akses `http://<IP_VPS_ANDA>:8006` untuk memantau layar proses instalasi awal Windows. Jika proses meminta persetujuan lisensi atau partisi, klik secara manual menggunakan mouse dari browser.
 5. Setelah layar di browser menampilkan Desktop Windows, Anda sudah bisa login menggunakan aplikasi Remote Desktop Connection (MSTSC).
 
 ## 🔐 Koneksi RDP
 Gunakan detail berikut pada aplikasi Remote Desktop Connection Anda:
-- **Computer / IP:** <IP_VPS_ANDA>:<PORT_YANG_ANDA_BUAT> (contoh: 192.168.1.1:6677)
-- **Username:** Administrator
+- **Computer / IP:** `<IP_VPS_ANDA>:<PORT_YANG_ANDA_BUAT>` (contoh: 192.168.1.1:6677)
+- **Username:** `Administrator`
 - **Password:** Sesuai dengan yang Anda inputkan saat instalasi.
 
 > **Catatan:** Pastikan Port 8006 dan Port RDP yang Anda buat sudah diizinkan (Allow) pada Firewall / Security Group di panel provider VPS Anda.
-
-# === SELESAI ===
