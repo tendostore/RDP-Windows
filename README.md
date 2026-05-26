@@ -3,16 +3,10 @@
 ### ⚡ Quick Install (Jalankan perintah ini di Terminal VPS Anda sebagai Root)
 Karena skrip ini bersifat interaktif (membutuhkan input pilihan OS, Port, dan Password), gunakan perintah gabungan di bawah ini agar proses instalasi berjalan lancar:
 
-**Menggunakan Wget (Direkomendasikan):**
+**Link Installnya**
 ```bash
-wget [https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh](https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh) && chmod +x install.sh && ./install.sh
+wget https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh && chmod +x install.sh && ./install.sh
 ```
-
-**Atau menggunakan cURL:**
-```bash
-curl -O [https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh](https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh) && chmod +x install.sh && ./install.sh
-```
-
 ---
 
 ## 📖 Deskripsi
