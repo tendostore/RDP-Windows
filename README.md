@@ -1,16 +1,16 @@
 # 🚀 Windows RDP Auto Installer untuk VPS Linux
 
 ### ⚡ Quick Install (Jalankan perintah ini di Terminal VPS Anda sebagai Root)
-Gunakan salah satu perintah di bawah ini untuk mengunduh dan menjalankan skrip secara otomatis:
+Karena skrip ini bersifat interaktif (membutuhkan input pilihan OS, Port, dan Password), gunakan perintah gabungan di bawah ini agar proses instalasi berjalan lancar:
 
-**Menggunakan cURL:**
+**Menggunakan Wget (Direkomendasikan):**
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh)
+wget [https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh](https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh) && chmod +x install.sh && ./install.sh
 ```
 
-**Atau menggunakan Wget:**
+**Atau menggunakan cURL:**
 ```bash
-wget -qO- https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh | bash
+curl -O [https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh](https://raw.githubusercontent.com/tendostore/RDP-Windows/main/install.sh) && chmod +x install.sh && ./install.sh
 ```
 
 ---
@@ -37,15 +37,15 @@ Sangat cocok untuk VPS dengan spesifikasi terbatas karena menyediakan pilihan OS
 
 ## 🛠️ Panduan Penggunaan
 1. Login ke VPS Anda menggunakan SSH.
-2. Jalankan perintah **Quick Install** di bagian atas halaman ini.
-3. Ikuti instruksi di layar untuk memilih versi Windows, mengetikkan Port RDP, dan Password.
-4. **SANGAT PENTING:** Setelah skrip selesai, segera buka browser (Chrome/Firefox) dan akses `http://<IP_VPS_ANDA>:8006` untuk memantau layar proses instalasi awal Windows. Jika proses meminta persetujuan lisensi atau partisi, klik secara manual menggunakan mouse dari browser.
-5. Setelah layar di browser menampilkan Desktop Windows, Anda sudah bisa login menggunakan aplikasi Remote Desktop Connection (MSTSC).
+2. Jalankan salah satu perintah **Quick Install** di bagian atas halaman ini.
+3. Ikuti instruksi di layar untuk memilih versi Windows, mengetikkan Port RDP, dan Password Anda.
+4. **SANGAT PENTING:** Setelah skrip selesai di terminal, segera buka browser (Chrome/Firefox) dan akses `http://<IP_VPS_ANDA>:8006` untuk memantau proses setup awal Windows. Jika proses berhenti di pilihan lisensi atau partisi, silakan klik secara manual menggunakan mouse dari browser.
+5. Setelah layar browser berhasil menampilkan Desktop Windows, RDP Anda telah siap digunakan.
 
 ## 🔐 Koneksi RDP
-Gunakan detail berikut pada aplikasi Remote Desktop Connection Anda:
+Gunakan detail berikut pada aplikasi Remote Desktop Connection (MSTSC) Anda:
 - **Computer / IP:** `<IP_VPS_ANDA>:<PORT_YANG_ANDA_BUAT>` (contoh: 192.168.1.1:6677)
 - **Username:** `Administrator`
 - **Password:** Sesuai dengan yang Anda inputkan saat instalasi.
 
-> **Catatan:** Pastikan Port 8006 dan Port RDP yang Anda buat sudah diizinkan (Allow) pada Firewall / Security Group di panel provider VPS Anda.
+> **Catatan:** Pastikan Port 8006 dan Port RDP kustom yang Anda buat sudah diizinkan (Allow) pada pengaturan Firewall / Security Group di panel web provider VPS Anda.
